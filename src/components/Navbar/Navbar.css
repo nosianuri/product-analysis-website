@@ -1,0 +1,14 @@
+nav a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: 700;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+nav a:hover{
+    color: brown;
+}

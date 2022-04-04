@@ -1,0 +1,33 @@
+h1{
+    color: rgb(255, 137, 216);;
+}
+.home-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.text-home{
+    font-size: 30px;
+    font-weight: bolder;
+    
+}
+.live-button .live-demo{
+    padding: 15px;
+    border: none;
+    color: antiquewhite;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(255, 137, 216);
+}
+
+.image-home img{
+    padding: 50px;
+    width: 700px;
+    height: 400px;
+}
+
+.cosmetic-review{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
