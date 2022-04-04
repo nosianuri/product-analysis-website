@@ -1,8 +1,8 @@
 import React from 'react';
-import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts';
+import { Pie, PieChart, Tooltip, XAxis, YAxis } from 'recharts';
 
-const MyLineChart = () => {
-    const data =[
+const MyPieChart = () => {
+    const data = [
         {
             "month": "Mar",
             "investment": 100000,
@@ -41,14 +41,12 @@ const MyLineChart = () => {
         }
     ]
     return (
-        <LineChart width={600} height={500} data={data}>
-            <Line dataKey={'sell'}></Line>
-            <Line dataKey={'investment'}></Line>
-            <XAxis dataKey='month'></XAxis>
-            <Tooltip />
-            <YAxis></YAxis>
-        </LineChart>
+        <PieChart width={400} height={400}>
+            <Pie dataKey={'sell'} cx="50%" cy="50%" outerRadius={60} fill="#8884d8" />
+            <Pie dataKey={'revenue'}cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label />
+        
+            </PieChart>
     );
 };
 
-export default MyLineChart;
+export default MyPieChart;

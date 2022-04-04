@@ -1,25 +1,50 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { Bar, BarChart } from 'recharts';
-
-const MyBarChart = () => {
-    const [props, setProps] =useState([]);
-    useEffect( () =>{
-      axios.get('data.json') 
-      .then(data=> {
-          const loadedData = data.data;
-          const propsData = loadedData.map(data => {
-            const parts = data.revenue;
-            
-            return parts;
-          });
-          setProps(propsData);
-          console.log(propsData);
-      })
- }, []);
+import React from 'react';
+import { Bar, BarChart, Tooltip, XAxis, YAxis } from 'recharts';
+const MyBarChart = () =>{
+const data =[
+  {
+      "month": "Mar",
+      "investment": 100000,
+      "sell": 241,
+      "revenue": 10401
+  },
+  {
+      "month": "Apr",
+      "investment": 200000,
+      "sell": 423,
+      "revenue": 24500
+  },
+  {
+      "month": "May",
+      "investment": 500000,
+      "sell": 726,
+      "revenue": 67010
+  },
+  {
+      "month": "Jun",
+      "investment": 500000,
+      "sell": 529,
+      "revenue": 40405
+  },
+  {
+      "month": "Jul",
+      "investment": 600000,
+      "sell": 601,
+      "revenue": 50900
+  },
+  {
+      "month": "Aug",
+      "investment": 700000,
+      "sell": 670,
+      "revenue": 61000
+  },
+];
     return (
-        <BarChart width={800} height={400} data={props}>
-          <Bar dataKey="revenue" fill="#8884d8" />
+        <BarChart width={600} height={500} data={data}>
+          <Bar dataKey="sell" fill="#8884d8" />
+          <XAxis dataKey='month'></XAxis>
+          <Tooltip />
+            <YAxis></YAxis>
         </BarChart>
     );
 };
