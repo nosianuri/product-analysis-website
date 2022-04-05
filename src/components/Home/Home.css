@@ -31,3 +31,12 @@ h1{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
+.reviews-button{
+    border: none;
+    border-radius: 5px;
+    color: antiquewhite;;
+    background-color: rgb(255, 137, 216);;
+    font-size: 20px;
+    padding: 5px 10px;
+    
+}
