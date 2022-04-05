@@ -6,7 +6,7 @@ https://majestic-mousse-a53530.netlify.app/home
 .Make a beautiful website page\
 .Beauty shop review in Reviews link\
 .Make reachart in Dashboard link\
-.Answer the question in Blogs link\
+.Answer the question in Blogs link
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
